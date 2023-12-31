@@ -126,14 +126,14 @@ const onClickSearch = () =>{
           <WrapperHeaderNavbarItem>
             <span>Kết nối</span>
             <a
-              href={process.env.REACT_APP_IS_LOCAL ? "https://www.facebook.com/" : window.location.href}
+              href="https://www.facebook.com/"
               style={{ display: "block", margin: "0 5px" }}
             >
               <FacebookOutlined style={{ color: "#fff", fontSize: "16px" }} />
             </a>
 
             <a
-              href={process.env.REACT_APP_IS_LOCAL ? "https://www.instagram.com/Shopee_VN" : window.location.href}
+              href="https://www.instagram.com/Shopee_VN"
               style={{ display: "block" }}
             >
               <InstagramOutlined style={{ color: "#fff", fontSize: "16px" }} />
