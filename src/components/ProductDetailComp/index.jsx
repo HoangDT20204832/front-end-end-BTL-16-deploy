@@ -164,39 +164,39 @@ const ProductDetailComp = ({ idProduct }) => {
           />
           <Row className={styles.wrapImgsSmall}>
             <Col span={4} className={styles.imgSmall}>
-              <Image
+              {/* <Image
                 src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
                 alt="img small "
                 preview={false}
-              />
+              /> */}
             </Col>
             <Col span={4} className={styles.imgSmall}>
-              <Image
+              {/* <Image
                 src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
                 alt="img small "
                 preview={false}
-              />
+              /> */}
             </Col>
             <Col span={4} className={styles.imgSmall}>
-              <Image
+              {/* <Image
                 src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
                 alt="img small "
                 preview={false}
-              />
+              /> */}
             </Col>
             <Col span={4} className={styles.imgSmall}>
-              <Image
+              {/* <Image
                 src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
                 alt="img small "
                 preview={false}
-              />
+              /> */}
             </Col>
             <Col span={4} className={styles.imgSmall}>
-              <Image
+              {/* <Image
                 src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
                 alt="img small "
                 preview={false}
-              />
+              /> */}
             </Col>
           </Row>
         </Col>

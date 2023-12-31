@@ -136,10 +136,10 @@ const PasswordUserPage = () => {
         </Col>
 
         <Col span={10}>
-          <img
+          {/* <img
             className={styles.containerContentImg}
             src={process.env.REACT_APP_IS_LOCAL ? "https://giaohangtietkiem.vn/wp-content/uploads/2019/06/mat-khau-mac-dinh-tren-dau-ghi-hikvision.jpg" : window.location.href}
-          />
+          /> */}
         </Col>
       </Row>
     </Col>
