@@ -6,6 +6,7 @@ const BadgeComp = () => {
   const order = useSelector((state) => state.order);
   const navigate = useNavigate()
   // console.log("orderBadge", order);
+  //hmmmmmmm
   return (
     <div className={styles.headerCartList}>
       <img src="" alt="" className={styles.headerCartnocartimg} />
