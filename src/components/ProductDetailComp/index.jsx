@@ -23,7 +23,7 @@ const ProductDetailComp = ({ idProduct }) => {
   const [dataReviews, setDataReviews] = useState(null);
   const [hasImg, setHasImg] = useState("");
   const user = useSelector((state) => state.user);
-  console.log("hi user: ", user);
+  // console.log("hi user: ", user);
   const [selectedNavItem, setSelectedNavItem] = useState("Tất cả"); // Thêm state mới
 
   const onChange = (value) => {
