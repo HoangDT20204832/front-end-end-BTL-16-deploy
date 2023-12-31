@@ -7,7 +7,7 @@ import {useNavigate,useLocation} from "react-router-dom"
 import * as userService from "../../services/userService"
 import { useMutationHooks } from '../../hooks/useMutationHook';
 import * as message from "../../components/MessageComp"
-import { jwt-decode } from "jwt-decode";
+import  jwt_decode  from "jwt-decode";
 import {useDispatch} from "react-redux"
 import { updateUser } from '../../redux/slides/userSlide';
 import LoadingComp from '../../components/LoadingComp';
@@ -45,7 +45,7 @@ const SignInPage = () => {
       localStorage.setItem("refresh_token", JSON.stringify(data?.refresh_token))
 
       if(data?.access_token) {
-        const decoded = jwt-decode(data?.access_token);
+        const decoded = jwt_decode(data?.access_token);
         // console.log("decoded",decoded);
         if(decoded?.id){
           handleGetDetailUser(decoded?.id, data?.access_token)

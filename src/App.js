@@ -9,7 +9,7 @@ import {
   useQuery,
 } from '@tanstack/react-query'
 import { isJsonString } from "./utils";
-import { jwt-decode } from "jwt-decode";
+import jwt_decode from "jwt-decode";
 import * as userService from "./services/userService";
 import {useDispatch, useSelector} from "react-redux"
 import {resetUser,  updateUser } from "./redux/slides/userSlide";
@@ -36,7 +36,7 @@ function App() {
     if(storgateData && isJsonString(storgateData)){ //nếu storgateData tồn tại và là kiểu  Stirng
       storgateData= JSON.parse(storgateData);
       //jwtDecodeđể giải mã đối tượng từ access_token(storgateData) => trả về thông tin user ứng vowis access_token đó. 
-      decoded = jwt-decode(storgateData);
+      decoded = jwt_decode(storgateData);
       // console.log("decoded",decoded);
     }
     return {decoded, storgateData};
@@ -60,7 +60,7 @@ function App() {
   const { decoded } = handleDecoded()
   let storageRefreshToken = localStorage.getItem('refresh_token')
   const refreshToken = JSON.parse(storageRefreshToken)
-  const decodedRefreshToken =  jwt-decode(refreshToken)
+  const decodedRefreshToken =  jwt_decode(refreshToken)
   if (decoded?.exp < currentTime.getTime() / 1000) {
     if(decodedRefreshToken?.exp > currentTime.getTime() / 1000) {
       const data = await userService.refreshToken(refreshToken)
