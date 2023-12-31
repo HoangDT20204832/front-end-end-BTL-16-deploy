@@ -79,42 +79,42 @@ const FooterComp = () => {
                   <div className="footer__top-pay">
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8": window.location.href}
                         alt="mm"
                         className="footer__top-pay-img"
                       />
                     </a>
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16": window.location.href}
                         alt="aa"
                         className="footer__top-pay-img"
                       />
                     </a>
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08": window.location.href}
                         alt=""
                         className="footer__top-pay-img"
                       />
                     </a>
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c": window.location.href}
                         alt=""
                         className="footer__top-pay-img"
                       />
                     </a>
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281": window.location.href}
                         alt=""
                         className="footer__top-pay-img"
                       />
                     </a>
                     <a href="#" className="footer__top-pay-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09": window.location.href}
                         alt=""
                         className="footer__top-pay-img"
                       />
@@ -157,7 +157,7 @@ const FooterComp = () => {
                 <div className="footer__top-dowload">
                   <a href="#" className="footer__top-dowload-qr-link">
                     <img
-                      src= "https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472"
+                      src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472": window.location.href}
                       alt=""
                       className="footer__top-dowload-qr"
                     />
@@ -165,21 +165,21 @@ const FooterComp = () => {
                   <div className="footer__top-dowload-apps">
                     <a href="#" className="footer__top-dowload-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163": window.location.href}
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
                     </a>
                     <a href="#" className="footer__top-dowload-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def": window.location.href}
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
                     </a>
                     <a href="#" className="footer__top-dowload-link">
                       <img
-                        src= "https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0"
+                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0": window.location.href}
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
@@ -259,21 +259,21 @@ const FooterComp = () => {
         <div className="footer__bottom-list-icon">
           <a href="#" className="footer__bottom-icon-link">
             <img
-              src= "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png"
+              src={process.env.REACT_APP_IS_LOCAL ? "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png": window.location.href}
               alt=""
               className="footer__bottom-icon-img"
             />
           </a>
           <a href="#" className="footer__bottom-icon-link">
             <img
-              src= "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png"
+              src={process.env.REACT_APP_IS_LOCAL ? "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png": window.location.href}
               alt=""
               className="footer__bottom-icon-img"
             />
           </a>
           <a href="#" className="footer__bottom-icon-link">
             <img
-              src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3LNsouiRM4JTBr8C48WHd38xz8A70jr4ox00HJlMNuVdTBgdcPkGVOLx7Z7K0sOI8O8&usqp=CAU"
+              src={process.env.REACT_APP_IS_LOCAL ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3LNsouiRM4JTBr8C48WHd38xz8A70jr4ox00HJlMNuVdTBgdcPkGVOLx7Z7K0sOI8O8&usqp=CAU": window.location.href}
               alt=""
               className="footer__bottom-icon-img"
             />
