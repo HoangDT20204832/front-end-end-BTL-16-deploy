@@ -158,7 +158,7 @@ const MyOrderPage = () => {
                       >{(order?.totalPrice)?.toLocaleString()}đ</span>
                     </div>
                     <div style={{display: 'flex', gap: '10px'}}>
-                    {(order?.isDelivered &&  order?.isPaid && !idsOrderReviewed.includes(order?._id))  &&  
+                    {(order?.isDelivered &&  order?.isPaid && !idsOrderReviewed?.includes(order?._id))  &&  
                      <ButtonComponent
                         onClick={() => handleReviewOrder(order)}
                         size={40}

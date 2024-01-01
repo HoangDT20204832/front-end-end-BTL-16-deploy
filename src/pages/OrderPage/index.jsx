@@ -21,7 +21,7 @@ const OrderPage = () => {
   const[isOpenUpdateInfor, setIsOpenUpdateInfor] = useState(false)
   const dispatch = useDispatch()
   const onChange = (e) => {
-    if(listChecked.includes(e.target.value)){ //nếu check đã listCheck đã có rồi mà lại check thì sẽ xóa checked đó đi 
+    if(listChecked?.includes(e.target.value)){ //nếu check đã listCheck đã có rồi mà lại check thì sẽ xóa checked đó đi 
       const newListChecked = listChecked.filter((item) => item !== e.target.value)
       setListChecked(newListChecked)
     }else {
@@ -206,7 +206,7 @@ const handleOnchaneAddress = () =>{
                   <div key={index} className={styles.containerCartLeftItem}>
                     <div style={{width: '350px', display: 'flex', alignItems: 'center', gap: 4}}> 
                       {/* <Checkbox onChange={onChange} value={order?.product} ></Checkbox> */}
-                      <Checkbox onChange={onChange} value={order?.product} checked={listChecked.includes(order?.product)}></Checkbox>
+                      <Checkbox onChange={onChange} value={order?.product} checked={listChecked?.includes(order?.product)}></Checkbox>
                       <img src={order?.image} style={{width: '77px', height: '79px', objectFit: 'cover'}}/>
                       <div className={styles.containerCartName}>{order?.name}</div>
                     </div>
