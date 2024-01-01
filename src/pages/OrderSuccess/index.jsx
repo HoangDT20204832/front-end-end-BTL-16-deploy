@@ -38,9 +38,9 @@ const OrderSuccess = () => {
               </div>
 
               <div className={styles.containerCartLeftWrapperInfo}>
-                {state?.orders?.map((order) =>{
+                {state?.orders?.map((order,index) =>{
                     return (
-                      <div className={styles.containerCartLeftItem} >
+                      <div key={index} className={styles.containerCartLeftItem} >
                       <div style={{width: '350px', display: 'flex', alignItems: 'center', gap: 4}}> 
                         <img src={order?.image} style={{width: '77px', height: '79px', objectFit: 'cover'}}/>
                         <div className={styles.containerCartName}>{order?.name}</div>

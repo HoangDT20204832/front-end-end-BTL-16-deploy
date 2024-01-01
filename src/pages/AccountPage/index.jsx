@@ -235,7 +235,7 @@ const AccountPage = () => {
                       marginTop:'30px',
                       marginLeft:"180px"
                   }}
-                  textButton={'Lưu'}
+                  textbutton={'Lưu'}
                   styleTextButton={{color:'#fff', fontSize:'15px', fontWeight:'bold'}}
                   size={40}
               >

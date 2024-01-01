@@ -14,9 +14,9 @@ const BadgeComp = () => {
       <h4 className={styles.headerCartheading}>Sản phẩm trong giỏ hàng</h4>
       <ul className={styles.headerCartListitem}>
 
-        {order?.orderItems?.map((orderItem) =>{
+        {order?.orderItems?.map((orderItem, index) =>{
             return (
-                <li key={orderItem?.product} onClick={()=> navigate(`/product-detail/${orderItem?.product}`)} className={styles.headerCartitem}>
+                <li key={index} onClick={()=> navigate(`/product-detail/${orderItem?.product}`)} className={styles.headerCartitem}>
                 <img
                   src={orderItem?.image}
                   alt=""

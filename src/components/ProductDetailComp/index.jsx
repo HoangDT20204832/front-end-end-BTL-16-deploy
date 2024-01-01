@@ -446,7 +446,7 @@ const ProductDetailComp = ({ idProduct }) => {
               {dataReviews?.map((dataReview) => {
                 const createdAtDate = new Date(dataReview?.createdAt);
                 return (
-                <div className={styles.productRatingDetailsItem} key = {dataReview?.userId} >
+                <div className={styles.productRatingDetailsItem} key = {dataReview?._id} >
                     <div className={styles.productRatingDetailsHeader}>
                       <img src={dataReview?.userId?.avatar} />
                       <div>

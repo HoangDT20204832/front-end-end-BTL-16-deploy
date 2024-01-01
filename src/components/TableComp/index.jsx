@@ -31,16 +31,6 @@ const [pageSize, setPageSize] = useState(7);
 const handlePageSizeChange = (newPageSize) => {
   setPageSize(newPageSize);
 };
-const columnsWithWidth = columns.map(column => {
-  if (column.dataIndex === 'name') {
-    return {
-      ...column,
-      className: 'name-column', // Thêm lớp CSS cho cột "Name"
-      // width: column.width || 200, // Đặt chiều rộng mặc định là 200px cho cột "Name"
-    };
-  }
-  return column;
-});
   
   return (
     <div>
@@ -51,7 +41,7 @@ const columnsWithWidth = columns.map(column => {
           type: selectionType,
           ...rowSelection,
         }}
-        columns={columnsWithWidth}
+        columns={columns}
         dataSource={dataSource}
         pagination={{
           pageSize: pageSize,

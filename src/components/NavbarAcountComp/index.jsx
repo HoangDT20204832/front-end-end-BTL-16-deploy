@@ -19,6 +19,7 @@ const NavbarAcountComp = () => {
     setName(user?.name)
     setAvatar(user?.avatar)
   },[user])
+  const order = useSelector((state) => state.order)
 
   const [selectedNavItem, setSelectedNavItem] = useState("Hồ sơ"); // Thêm state mới
   return (
@@ -83,7 +84,9 @@ const NavbarAcountComp = () => {
             </div>
             <div className={clsx(styles.navbarBodyItem, {[styles.active]: selectedNavItem === "Đơn mua"})}
                     onClick={() => {
-                      navigate('/my-order')
+                      navigate("/my-order", {state: {
+                        id: user?.id,
+                      }})
                       setSelectedNavItem("Đơn mua")
                   }}>
               <div className={styles.navbarIcon}>

@@ -201,9 +201,9 @@ const handleOnchaneAddress = () =>{
                 </div>
             </div>
             <div className={styles.containerCartLeftBody}>
-              {order?.orderItems?.map((order) => {
+              {order?.orderItems?.map((order,index) => {
                 return ( 
-                  <div className={styles.containerCartLeftItem}>
+                  <div key={index} className={styles.containerCartLeftItem}>
                     <div style={{width: '350px', display: 'flex', alignItems: 'center', gap: 4}}> 
                       {/* <Checkbox onChange={onChange} value={order?.product} ></Checkbox> */}
                       <Checkbox onChange={onChange} value={order?.product} checked={listChecked.includes(order?.product)}></Checkbox>

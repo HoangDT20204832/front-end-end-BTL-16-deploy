@@ -84,7 +84,6 @@ const HomePage = () => {
           <WrapperHeadingProduct>DANH MỤC</WrapperHeadingProduct>
           <WrapperProduct>
             {typeProduct.map((product, index) => (
-              // <TypeProduct name={product.name} img={product.img} key={index} />
               <TypeProduct name={product} key={index} />
             ))}
           </WrapperProduct>

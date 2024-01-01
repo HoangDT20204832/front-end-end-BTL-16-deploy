@@ -69,11 +69,11 @@ const DetailsOrderPage = () => {
             <WrapperItemLabel>Số lượng</WrapperItemLabel>
             <WrapperItemLabel>Giảm giá</WrapperItemLabel>
           </div>
-          {data?.orderItems?.map((order) => {
+          {data?.orderItems?.map((order,index) => {
             return (
               <WrapperProduct>
                 <WrapperNameProduct>
-                  <img src={order?.image} 
+                  <img key={index} src={order?.image} 
                     style={{
                       width: '70px', 
                       height: '70px', 
