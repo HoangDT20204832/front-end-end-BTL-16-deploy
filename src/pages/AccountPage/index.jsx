@@ -6,12 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import * as messagee from "../../components/MessageComp/index"
 import {WrapperUploadFile } from './styles'
 import { UploadOutlined} from '@ant-design/icons'
-import clsx from "clsx";
 import ButtonComponent from "../../components/ButtonComp/index";
 import * as userService from "../../services/userService"
 import { useMutationHooks } from "../../hooks/useMutationHook";
 import { updateUser } from "../../redux/slides/userSlide";
-import NavbarAcountComp from "../../components/NavbarAcountComp/index";
 
 const AccountPage = () => {
 
@@ -40,9 +38,7 @@ const AccountPage = () => {
     // console.log(`Selected: ${value}`);
   };
   const [size, setSize] = useState("middle");
-  const handleSizeChange = (e) => {
-    setSize(e.target.value);
-  };
+
 
   const user = useSelector((state) => state.user)
   const [name, setName] = useState('');

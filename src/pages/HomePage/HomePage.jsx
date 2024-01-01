@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TypeProduct from "../../components/TypeProduct/TypeProduct";
 import {
   WrapperHeadingProduct,
@@ -16,7 +16,6 @@ import { useQuery } from "@tanstack/react-query";
 import * as productService from "../../services/productService";
 import { useSelector } from "react-redux";
 import { useDebounce } from "../../hooks/useDebounce";
-import ButtonComponent from "../../components/ButtonComp";
 import LoadingComp from "../../components/LoadingComp";
 
 const HomePage = () => {

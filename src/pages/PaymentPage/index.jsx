@@ -1,11 +1,10 @@
-import { Checkbox, InputNumber, Radio } from "antd";
+import { Radio } from "antd";
 import React, { useEffect, useMemo, useState } from "react";
-import { DeleteOutlined, MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import ButtonComponent from "../../components/ButtonComp/index";
 import { useDispatch, useSelector } from "react-redux";
 import { removeAllOrderProduct } from "../../redux/slides/orderSlide";
 import styles from "./styles.module.css";
-import { Button, Modal, Form } from "antd";
+import {  Modal, Form } from "antd";
 import InputComponent from "../../components/InputComponent/InputComponent";
 import { useMutationHooks } from "../../hooks/useMutationHook";
 import * as userService from "../../services/userService";
@@ -69,12 +68,6 @@ const PaymentPage = () => {
     const res = userService.updateUserInfor(id, { ...rest });
     return res;
   });
-
-  const {isLoading,
-    data: dataUpdated,
-    isSuccess: isSuccessUpdated,
-    isError: isErrorUpdated,
-  } = mutationUpdate;
 
   const mutationAddOrder = useMutationHooks((data) => {
     const { ...rest } = data;

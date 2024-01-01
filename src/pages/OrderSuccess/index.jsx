@@ -1,13 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-
 import styles from "./styles.module.css";
 import {useLocation} from "react-router-dom"
 import { orderContant } from "../../contant";
 
 const OrderSuccess = () => {
   const location = useLocation()
-  const order = useSelector((state) => state.order);
+  // const order = useSelector((state) => state.order);
   const {state} = location
 
   return (

@@ -1,26 +1,23 @@
 import { Checkbox,InputNumber } from 'antd'
 import React, { useEffect, useMemo, useState } from 'react'
-import { DeleteOutlined, MinusOutlined, PlusOutlined} from '@ant-design/icons'
+import { MinusOutlined, PlusOutlined} from '@ant-design/icons'
 import ButtonComponent from '../../components/ButtonComp/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { decreaseAmount, increaseAmount, removeAllOrderProduct, removeOrderProduct, selectOrder } from '../../redux/slides/orderSlide';
 import styles from "./styles.module.css";
-import { Button,  Modal,Form} from 'antd';
+import {   Modal,Form} from 'antd';
 import InputComponent from '../../components/InputComponent/InputComponent';
 import { useMutationHooks } from '../../hooks/useMutationHook';
 import * as userService from "../../services/userService"
 import * as messagee from "../../components/MessageComp"
 import { updateUser } from '../../redux/slides/userSlide';
 import {useNavigate} from "react-router-dom"
-import LoadingComp from "../../components/LoadingComp";
 
 const OrderPage = () => {
   const navigate = useNavigate()
   const order = useSelector((state) => state.order)
   const [listChecked, setListChecked] = useState([])
   const user = useSelector((state) => state.user)
-  const idUser = user?.id
-  // const [loading, setLoading] = useState(false)
   const[isOpenUpdateInfor, setIsOpenUpdateInfor] = useState(false)
   const dispatch = useDispatch()
   const onChange = (e) => {

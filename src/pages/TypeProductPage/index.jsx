@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavbarComp from "../../components/NavbarComp";
 import CardProductComp from "../../components/CardProductComp";
 import { Col, Pagination } from "antd";
 import {
@@ -17,9 +16,7 @@ import {
 } from "./styles";
 import { useLocation } from "react-router-dom";
 import * as productService from "../../services/productService";
-import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
-import { useDebounce } from "../../hooks/useDebounce";
 import LoadingComp from "../../components/LoadingComp";
 
 const TypeProductPage = (type) => {
@@ -27,7 +24,6 @@ const TypeProductPage = (type) => {
   // console.log("location: ", location);
   const { state } = location;
   const productSearch = useSelector((state) => state.product.search);
-  const searchDebounce = useDebounce(productSearch, 500);
   const [loading, setLoading] = useState(false);
 
   const [panigate, setPanigate] = useState({
@@ -36,24 +32,11 @@ const TypeProductPage = (type) => {
     totalItems: 5,
   });
 
-  // const fetchProductType = async(context) =>{
-  //   console.log("context: " , context)
-  //   const type = context.queryKey[1]
-  //   const page = context.queryKey[2]
-  //   const limit = context.queryKey[3]
-  //   const res = await productService.getProductsByType(type, page, limit)
-  //   setPanigate({...panigate,totalPages: res?.totalPages})
-  //   console.log("x: " , res)
-  //   if(res?.status === "OK"){
-  //     return res.data
-  //   }
-  // }
+
   const onChange = (current, pageSize) => {
     setPanigate({ ...panigate, page: current - 1, limit: pageSize });
     setLoading(true);
-    // setPanigate({...panigate,limit:pageSize})
-    // panigate.page = current -1;
-    // panigate.limit = pageSize
+ 
   };
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
@@ -97,7 +80,6 @@ const TypeProductPage = (type) => {
     fetchData();
   }, [price, productSearch, origin, rating, panigate.page, panigate.limit]);
   // const {data: productsType} = useQuery(['product-type',price, name, origin, rating,panigate.page,panigate.limit ], fetchData)
-  //  const productsType = fetchData()
   // console.log("productsType", productsType);
 
   return (
@@ -198,19 +180,7 @@ const TypeProductPage = (type) => {
         <Col span={20} style={{ backgroundColor: "#fff" }}>
           <LoadingComp isLoading={loading}>
             <WrapperProducts>
-              {productsType
-                ?.filter((product) => {
-                  if (searchDebounce === "") {
-                    return product;
-                  } else if (
-                    product?.name
-                      ?.toLowerCase()
-                      ?.includes(searchDebounce?.toLowerCase())
-                  ) {
-                    return product;
-                  }
-                })
-                ?.map((productType, index) => {
+              {productsType?.map((productType, index) => {
                   return (
                     <CardProductComp
                       key={productType._id}
