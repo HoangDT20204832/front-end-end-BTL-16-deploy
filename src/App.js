@@ -95,7 +95,7 @@ function App() {
                 <Route
                   key={route.path}
                   //path: chỉ đường dẫn hướng tới trang của element={<Page/>}
-                  path={isCheckAuth && route.path}
+                  path={isCheckAuth ? route.path : "/"}
                   // element để chỉ trang hiển thị
                   element={
                     <Layout>

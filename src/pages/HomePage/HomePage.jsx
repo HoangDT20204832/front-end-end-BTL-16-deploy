@@ -21,7 +21,7 @@ import LoadingComp from "../../components/LoadingComp";
 const HomePage = () => {
   
 
-  const productSearch = useSelector((state) => state.product.search);
+  const productSearch = useSelector((state) => state.product?.search);
   // const refSearch = useRef()
   // const [stateProduct, setStateProduct] = useState([])
   const searchDebounce = useDebounce(productSearch, 300);
@@ -83,13 +83,36 @@ const HomePage = () => {
         <WrapperListProduct>
           <WrapperHeadingProduct>DANH MỤC</WrapperHeadingProduct>
           <WrapperProduct>
-            {typeProduct.map((product, index) => (
+            {typeProduct?.map((product, index) => (
               <TypeProduct name={product} key={index} />
             ))}
           </WrapperProduct>
         </WrapperListProduct>
         <LoadingComp isLoading={loading }>
-        
+        <Row
+          style={{ marginTop: "20px", gap: "20px", justifyContent: "center" }}
+        >
+          {products?.data?.map((product) => {
+            return (
+              <CardProductComp
+                key={product._id}
+                countInStock={product.countInStock}
+                description={product.description}
+                discount={product.discount}
+                image={product.image}
+                name={product.name}
+                priceOld={product.priceOld}
+                priceNew={product.priceNew}
+                rating={product.rating}
+                selled={product.selled}
+                type={product.type}
+                id={product._id}
+                trademark={product.trademark}
+                origin={product.origin}
+              />
+            );
+          })}
+        </Row>
         </LoadingComp>
 
         {/* Đây là nút xem thêm, click vào sẽ hiển thị thêm sản phẩm */}
