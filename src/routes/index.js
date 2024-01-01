@@ -1,20 +1,20 @@
 import HomePage from "../pages/HomePage/HomePage"
-import OrderPage from "../pages/OrderPage"
+import OrderPage from "../pages/OrderPage/index"
 import ProductsPage from "../pages/ProductsPage/ProductsPage"
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
-import AccountPage from "../pages/AccountPage"
-import TypeProductPage from "../pages/TypeProductPage"
-import SignInPage from "../pages/SignInPage"
-import SignUpPage from "../pages/SignUpPage"
-import ProductPageDetail from "../pages/ProductPageDetail"
-import AdminPage from "../pages/AminPage"
-import PaymentPage from "../pages/PaymentPage"
-import OrderSuccess from "../pages/OrderSuccess"
-import MyOrderPage from "../pages/MyOrderPage"
-import DetailsOrderPage from "../pages/DetailsOrderPage"
-import AddressUserPage from "../pages/AddressUserPage"
-import BankUserPage from "../pages/BankUserPage"
-import PasswordUserPage from "../pages/PasswordUserPage"
+import AccountPage from "../pages/AccountPage/index"
+import TypeProductPage from "../pages/TypeProductPage/index"
+import SignInPage from "../pages/SignInPage/index"
+import SignUpPage from "../pages/SignUpPage/index"
+import ProductPageDetail from "../pages/ProductPageDetail/index"
+import AdminPage from "../pages/AminPage/index"
+import PaymentPage from "../pages/PaymentPage/index"
+import OrderSuccess from "../pages/OrderSuccess/index"
+import MyOrderPage from "../pages/MyOrderPage/index"
+import DetailsOrderPage from "../pages/DetailsOrderPage/index"
+import AddressUserPage from "../pages/AddressUserPage/index"
+import BankUserPage from "../pages/BankUserPage/index"
+import PasswordUserPage from "../pages/PasswordUserPage/index"
 export const routers = [
     {
         path: '/',
@@ -104,6 +104,5 @@ export const routers = [
     {
         path: '*',
         page: NotFoundPage,
-        isShowHeader: false,
     }
 ]
