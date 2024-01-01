@@ -165,35 +165,35 @@ const ProductDetailComp = ({ idProduct }) => {
           <Row className={styles.wrapImgsSmall}>
             <Col span={4} className={styles.imgSmall}>
               <Image
-                src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
+                src= "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" 
                 alt="img small "
                 preview={false}
               />
             </Col>
             <Col span={4} className={styles.imgSmall}>
               <Image
-                src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
+                src= "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" 
                 alt="img small "
                 preview={false}
               />
             </Col>
             <Col span={4} className={styles.imgSmall}>
               <Image
-                src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
+                src= "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" 
                 alt="img small "
                 preview={false}
               />
             </Col>
             <Col span={4} className={styles.imgSmall}>
               <Image
-                src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
+                src= "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" 
                 alt="img small "
                 preview={false}
               />
             </Col>
             <Col span={4} className={styles.imgSmall}>
               <Image
-                src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" : window.location.href}
+                src= "https://down-vn.img.susercontent.com/file/sg-11134201-22110-snojb4c74gkvbf" 
                 alt="img small "
                 preview={false}
               />
@@ -304,7 +304,7 @@ const ProductDetailComp = ({ idProduct }) => {
                   borderRadius: "4px",
                 }}
                 onClick={handleAddOrderProduct}
-                textButton={"Thêm vào giỏ hàng"}
+                textbutton={"Thêm vào giỏ hàng"}
                 styleTextButton={{
                   color: "#ee4d2d",
                   fontSize: "15px",
@@ -323,7 +323,7 @@ const ProductDetailComp = ({ idProduct }) => {
                 border: "none",
                 borderRadius: "4px",
               }}
-              textButton={"Mua ngay"}
+              textbutton={"Mua ngay"}
               styleTextButton={{
                 color: "#fff",
                 fontSize: "15px",
@@ -446,7 +446,7 @@ const ProductDetailComp = ({ idProduct }) => {
               {dataReviews?.map((dataReview) => {
                 const createdAtDate = new Date(dataReview?.createdAt);
                 return (
-                  <div className={styles.productRatingDetailsItem}>
+                <div className={styles.productRatingDetailsItem} key = {dataReview?.userId} >
                     <div className={styles.productRatingDetailsHeader}>
                       <img src={dataReview?.userId?.avatar} />
                       <div>

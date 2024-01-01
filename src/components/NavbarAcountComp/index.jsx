@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Col, Input, Radio, Row, Select, Button, Upload } from "antd";
-import { UploadOutlined} from '@ant-design/icons'
+import { Col} from "antd";
 import {
   EditOutlined,
   UserOutlined,
@@ -9,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import styles from "./styles.module.css"
 import clsx from "clsx";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom"
 const NavbarAcountComp = () => {
   const user = useSelector((state) => state.user)

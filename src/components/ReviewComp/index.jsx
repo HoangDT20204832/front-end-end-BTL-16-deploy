@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as reviewService from '../../services/reviewService';
 import { useMutationHooks } from '../../hooks/useMutationHook';
 import styles from "./styles.module.css"
-import { Col, Rate, Space,Button, Modal,Upload } from "antd";
+import {  Rate, Space,Button, Modal } from "antd";
 import * as messagee from '../MessageComp/index'
 import { WrapperUploadFile } from './styles';
 import { updateIdsOrderReviewed } from "../../redux/slides/orderSlide";

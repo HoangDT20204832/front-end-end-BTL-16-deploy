@@ -25,7 +25,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"Tất cả"}
+                  textbutton={"Tất cả"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",
@@ -40,7 +40,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"5 Sao"}
+                  textbutton={"5 Sao"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",
@@ -54,7 +54,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"4 Sao"}
+                  textbutton={"4 Sao"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",
@@ -69,7 +69,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"3 Sao"}
+                  textbutton={"3 Sao"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",
@@ -84,7 +84,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"2 Sao"}
+                  textbutton={"2 Sao"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",
@@ -99,7 +99,7 @@ const WrapperRatingComp = () => {
                       border: "1px solid var(--background-color)",
                       borderRadius: "4px",
                   }}
-                  textButton={"1 Sao"}
+                  textbutton={"1 Sao"}
                   styleTextButton={{
                       color: "var(--text-color)",
                       fontSize: "15px",

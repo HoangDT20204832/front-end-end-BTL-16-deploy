@@ -1,16 +1,10 @@
 import { Table,Pagination  } from 'antd';
 import React, { useState } from 'react'
-// import Loading from '../../components/LoadingComponent/Loading'
-// import { Excel } from "antd-table-saveas-excel";
-import { useMemo } from 'react';
+
 import "./styles.css"
 const TableComponent = (props) => {
   const { selectionType = 'checkbox', data:dataSource = [], columns = [] } = props
-  // const [rowSelectedKeys, setRowSelectedKeys] = useState([])
-  // const newColumnExport = useMemo(() => {
-  //   const arr = columns?.filter((col) => col.dataIndex !== 'action')
-  //   return arr
-  // }, [columns])
+
   
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
@@ -18,13 +12,10 @@ const TableComponent = (props) => {
     },
     getCheckboxProps: (record) => ({
       disabled: record.name === 'Disabled User',
-      // Column configuration not to be checked
       name: record.name,
     }),
   };
-  // const handleDeleteAll = () => {
-  //   handleDelteMany(rowSelectedKeys)
-  // }
+
 
 //   const exportExcel = () => {
 //     const excel = new Excel();
@@ -53,19 +44,7 @@ const columnsWithWidth = columns.map(column => {
   
   return (
     <div>
-      {/* {!!rowSelectedKeys.length && (
-        <div style={{
-          background: '#1d1ddd',
-          color: '#fff',
-          fontWeight: 'bold',
-          padding: '10px',
-          cursor: 'pointer'
-        }}
-          onClick={handleDeleteAll}
-        >
-          Xóa tất cả
-        </div>
-      )} */}
+
       {/* <button onClick={exportExcel}>Export Excel</button> */}
       <Table
         rowSelection={{

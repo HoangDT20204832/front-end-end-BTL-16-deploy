@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { Button,  Modal,Form} from 'antd';
+import { Button, Form} from 'antd';
 import TableComponent from "../TableComp/index";
 import InputComponent from "../InputComponent/InputComponent";
 import * as orderService from "../../services/orderService"

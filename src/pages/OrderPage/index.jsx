@@ -277,7 +277,7 @@ const handleOnchaneAddress = () =>{
                   border: 'none',
                   borderRadius: '4px'
               }}
-              textButton={'Mua hàng'}
+              textbutton={'Mua hàng'}
               styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
           ></ButtonComponent>
           </div>

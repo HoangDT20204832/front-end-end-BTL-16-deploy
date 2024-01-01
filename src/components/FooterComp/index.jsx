@@ -16,29 +16,29 @@ const FooterComp = () => {
                 <div className="footer__top-heading">Chăm sóc khách hàng</div>
                 <ul className="footer__top-list">
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Trung tâm trợ giúp
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                        Blog
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                        Mail
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Hướng dẫn mua hàng
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Hướng dẫn bán hàng
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -46,29 +46,29 @@ const FooterComp = () => {
                 <div className="footer__top-heading">Về trang web</div>
                 <ul className="footer__top-list">
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Giới thiệu về Ứng dụng
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Tuyển dụng
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Điều khoản trang web
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Chính sách bảo mật
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       Chính hãng
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -77,48 +77,48 @@ const FooterComp = () => {
                 <div className="footer__top-heading">
                   Thanh toán
                   <div className="footer__top-pay">
-                    <a href="#" className="footer__top-pay-link">
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8" 
                         alt="mm"
                         className="footer__top-pay-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-pay-link">
+                    </div>
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16" 
                         alt="aa"
                         className="footer__top-pay-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-pay-link">
+                    </div>
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08" 
                         alt=""
                         className="footer__top-pay-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-pay-link">
+                    </div>
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c" 
                         alt=""
                         className="footer__top-pay-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-pay-link">
+                    </div>
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281" 
                         alt=""
                         className="footer__top-pay-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-pay-link">
+                    </div>
+                    <div className="footer__top-pay-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09" 
                         alt=""
                         className="footer__top-pay-img"
                       />
-                    </a>
+                    </div>
             
                   </div>
                 </div>
@@ -130,22 +130,22 @@ const FooterComp = () => {
                 </div>
                 <ul className="footer__top-list">
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       <FacebookOutlined className="footer__top-icon"/>
                       Facebook
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       <InstagramOutlined className="footer__top-icon" />
                       Instagram
-                    </a>
+                    </div>
                   </li>
                   <li className="footer__top-item">
-                    <a href="#" className="footer__top-link">
+                    <div className="footer__top-link">
                       <LinkedinOutlined className="footer__top-icon" />
                       Linkedin
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -155,35 +155,35 @@ const FooterComp = () => {
                   Tải ứng dụng  ngay
                 </div>
                 <div className="footer__top-dowload">
-                  <a href="#" className="footer__top-dowload-qr-link">
+                  <div className="footer__top-dowload-qr-link">
                     <img
-                      src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472": window.location.href}
+                      src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472" 
                       alt=""
                       className="footer__top-dowload-qr"
                     />
-                  </a>
+                  </div>
                   <div className="footer__top-dowload-apps">
-                    <a href="#" className="footer__top-dowload-link">
+                    <div className="footer__top-dowload-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163" 
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-dowload-link">
+                    </div>
+                    <div className="footer__top-dowload-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def" 
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
-                    </a>
-                    <a href="#" className="footer__top-dowload-link">
+                    </div>
+                    <div className="footer__top-dowload-link">
                       <img
-                        src={process.env.REACT_APP_IS_LOCAL ? "https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0": window.location.href}
+                        src="https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0" 
                         alt=""
                         className="footer__top-dowload-app-img"
                       />
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -199,34 +199,34 @@ const FooterComp = () => {
             <div className="footer__top-country-list">
               <div className="footer__top-name">Quốc gia & Khu vực:</div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Singapore
-                </a>
+                </div>
               </div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Indonesia
-                </a>
+                </div>
               </div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Đài Loan
-                </a>
+                </div>
               </div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Thái Lan
-                </a>
+                </div>
               </div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Malaysia
-                </a>
+                </div>
               </div>
               <div className="footer__top-country-name">
-                <a href="#" className="footer__top-country-link">
+                <div className="footer__top-country-link">
                   Việt Nam
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -235,49 +235,49 @@ const FooterComp = () => {
       <div className="footer__bottom">
         <div className="footer__bottom-heading">
           <div className="footer__bottom-heading-info">
-            <a href="#" className="footer__bottom-heading-link">
+            <div className="footer__bottom-heading-link">
               Chính sách bảo mật
-            </a>
+            </div>
           </div>
           <div className="footer__bottom-heading-info">
-            <a href="#" className="footer__bottom-heading-link">
+            <div className="footer__bottom-heading-link">
               Quy chế hoạt động
-            </a>
+            </div>
           </div>
           <div className="footer__bottom-heading-info">
-            <a href="#" className="footer__bottom-heading-link">
+            <div className="footer__bottom-heading-link">
               Chính sách vận chuyển
-            </a>
+            </div>
           </div>
           <div className="footer__bottom-heading-info">
-            <a href="#" className="footer__bottom-heading-link">
+            <div className="footer__bottom-heading-link">
               Chính sách trả hàng và hoàn tiền
-            </a>
+            </div>
           </div>
         </div>
 
         <div className="footer__bottom-list-icon">
-          <a href="#" className="footer__bottom-icon-link">
+          <div className="footer__bottom-icon-link">
             <img
-              src={process.env.REACT_APP_IS_LOCAL ? "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png": window.location.href}
+              src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" 
               alt=""
               className="footer__bottom-icon-img"
             />
-          </a>
-          <a href="#" className="footer__bottom-icon-link">
+          </div>
+          <div className="footer__bottom-icon-link">
             <img
-              src={process.env.REACT_APP_IS_LOCAL ? "http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png": window.location.href}
+              src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" 
               alt=""
               className="footer__bottom-icon-img"
             />
-          </a>
-          <a href="#" className="footer__bottom-icon-link">
+          </div>
+          <div className="footer__bottom-icon-link">
             <img
-              src={process.env.REACT_APP_IS_LOCAL ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3LNsouiRM4JTBr8C48WHd38xz8A70jr4ox00HJlMNuVdTBgdcPkGVOLx7Z7K0sOI8O8&usqp=CAU": window.location.href}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3LNsouiRM4JTBr8C48WHd38xz8A70jr4ox00HJlMNuVdTBgdcPkGVOLx7Z7K0sOI8O8&usqp=CAU" 
               alt=""
               className="footer__bottom-icon-img"
             />
-          </a>
+          </div>
         </div>
 
         <div className="footer__bottom-name-company">Công ty TNHH </div>

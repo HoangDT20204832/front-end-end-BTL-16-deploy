@@ -28,7 +28,7 @@ const handleNavigateType = (typeProduct) =>{
 }
   return (
     <WrapperProduct onClick={() => handleNavigateType(name)}>
-      <WrapperImg src={process.env.REACT_APP_IS_LOCAL ? imgType : window.location.href}></WrapperImg>
+      <WrapperImg src={ imgType }></WrapperImg>
       <div>{name}</div>
     </WrapperProduct>
   )

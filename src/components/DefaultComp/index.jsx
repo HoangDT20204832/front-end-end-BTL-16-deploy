@@ -9,7 +9,6 @@ const DefaultComponent = ({children}) => {
         <div style={{position:"fixed", top:"0",width:"100%", zIndex:"101"}}>
           <HeaderComponent />
         </div>
-        {/* <NavbarAcountComp/> */}
         <div style={{marginTop:"120px"}}>
         {children}
         </div>

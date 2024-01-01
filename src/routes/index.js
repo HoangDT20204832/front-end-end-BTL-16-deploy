@@ -14,7 +14,7 @@ import MyOrderPage from "../pages/MyOrderPage"
 import DetailsOrderPage from "../pages/DetailsOrderPage"
 import AddressUserPage from "../pages/AddressUserPage"
 import BankUserPage from "../pages/BankUserPage"
-import PasswordUserPage from "../pages/PasswordUserPage copy"
+import PasswordUserPage from "../pages/PasswordUserPage"
 export const routers = [
     {
         path: '/',
@@ -90,12 +90,10 @@ export const routers = [
     {
         path: "/sign-in",
         page: SignInPage,
-        isShowHeader: false,
     },
     {
         path: "/sign-up",
         page: SignUpPage,
-        isShowHeader: false,
     },
     {
         path: "/system/admin",

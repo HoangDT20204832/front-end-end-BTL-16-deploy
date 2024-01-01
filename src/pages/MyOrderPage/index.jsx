@@ -168,7 +168,7 @@ const MyOrderPage = () => {
                             borderRadius: '4px',
                             background: "var(--active-color)"
                         }}
-                        textButton={'Đánh giá'}
+                        textbutton={'Đánh giá'}
                         styleTextButton={{ color: 'var(--white-color)', fontSize: '14px' }}
                       >
                       </ButtonComponent>}
@@ -183,7 +183,7 @@ const MyOrderPage = () => {
                             border: '1px solid #9255FD',
                             borderRadius: '4px'
                         }}
-                        textButton={'Hủy đơn hàng'}
+                        textbutton={'Hủy đơn hàng'}
                         styleTextButton={{ color: '#9255FD', fontSize: '14px' }}
                       >
                       </ButtonComponent>}
@@ -197,7 +197,7 @@ const MyOrderPage = () => {
                             borderRadius: '4px',
                             background: "var(--active-color)"
                         }}
-                        textButton={'Đã nhận hàng'}
+                        textbutton={'Đã nhận hàng'}
                         styleTextButton={{ color: '#fff', fontSize: '14px' }}
                       >
                       </ButtonComponent>)
@@ -210,7 +210,7 @@ const MyOrderPage = () => {
                           borderRadius: '4px',
                           background: "var(--active-color)"
                       }}
-                      textButton={'Mua lại'}
+                      textbutton={'Mua lại'}
                       styleTextButton={{ color: '#fff', fontSize: '14px' }}
                     >
                     </ButtonComponent>
@@ -224,7 +224,7 @@ const MyOrderPage = () => {
                             border: '1px solid #9255FD',
                             borderRadius: '4px'
                         }}
-                        textButton={'Xem chi tiết'}
+                        textbutton={'Xem chi tiết'}
                         styleTextButton={{ color: '#9255FD', fontSize: '14px' }}
                       >
                       </ButtonComponent>

@@ -8,7 +8,6 @@ import * as productService from "../../services/productService"
 import {useMutationHooks} from "../../hooks/useMutationHook"
 import * as messagee from "../../components/MessageComp"
 import {useQuery} from "@tanstack/react-query"
-import { PlusOutlined, DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons'
 import DrawerComp from "../DrawerComp";
 import {useSelector} from "react-redux"
 import LoadingComp from "../LoadingComp";

@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom"
 const BadgeComp = () => {
   const order = useSelector((state) => state.order);
   const navigate = useNavigate()
-  // console.log("orderBadge", order);
+  console.log("orderBadge", order);
   return (
     <div className={styles.headerCartList}>
       <img src="" alt="" className={styles.headerCartnocartimg} />
@@ -16,7 +16,7 @@ const BadgeComp = () => {
 
         {order?.orderItems?.map((orderItem) =>{
             return (
-                <li onClick={()=> navigate(`/product-detail/${orderItem?.product}`)} className={styles.headerCartitem}>
+                <li key={orderItem?.product} onClick={()=> navigate(`/product-detail/${orderItem?.product}`)} className={styles.headerCartitem}>
                 <img
                   src={orderItem?.image}
                   alt=""

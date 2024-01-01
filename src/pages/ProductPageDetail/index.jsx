@@ -9,7 +9,7 @@ const ProductPageDetail = () => {
     return (
         <div className={styles.wrapProductDetail}>
             <div className="grid">
-            <h4><span onClick={() => navigate("/")}>Trang chủ</span> > Chi tiết sản phẩm</h4>
+            <h4><span onClick={() => navigate("/")}>Trang chủ</span>  Chi tiết sản phẩm</h4>
             <ProductDetailComp idProduct= {id} />
             {/* <WrapperRatingComp /> */}
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Drawer } from "antd";
+import { Drawer } from "antd";
 const DrawerComp = ({
   title = "Drawer",
   placement = "left",

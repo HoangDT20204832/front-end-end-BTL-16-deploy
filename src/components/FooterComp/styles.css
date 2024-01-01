@@ -1,14 +1,10 @@
-/* Footer  */
 
-/* Footer top  */
 .footer__top{
     background-color: #FBFBFB;
     padding-top: 50px;
 }
 
-.footer__top-info{
 
-}
 
 .footer__top-heading{
     font-size: 1.4rem;
@@ -23,9 +19,7 @@
     list-style: none;
 }
 
-.footer__top-item{
-    
-}
+
 
 .footer__top-link{
     color: #666;
@@ -62,9 +56,7 @@
     margin-bottom: 8px;
 }
 
-.footer__top-pay-img{
 
-}
 
 
 .footer__top-dowload{
@@ -100,20 +92,9 @@
 
 }
 
-.footer__top-power{
-    
-}
 
 .footer__top-country-list{
     display: flex;
-}
-
-.footer__top-name{
-
-}
-
-.footer__top-country-name{
-
 }
 
 .footer__top-country-link{

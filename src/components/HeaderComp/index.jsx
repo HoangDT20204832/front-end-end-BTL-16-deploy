@@ -1,10 +1,9 @@
 import React from "react";
-import { Badge, Col,Popover } from "antd";
+import {  Col,Popover } from "antd";
 import {
   WrapperHeader,
   WrapperTextHeader,
   WrapperHeaderAcount,
-  WrapperTextHeaderSmall,
   WrapperHeaderNavbar,
   WrapperHeaderNavbarList,
   WrapperHeaderNavbarItem,
@@ -12,7 +11,6 @@ import {
 } from "./styles.js";
 import {
   UserOutlined,
-  CaretDownOutlined,
   ShoppingCartOutlined,
   FacebookOutlined,
   InstagramOutlined,
@@ -125,19 +123,17 @@ const onClickSearch = () =>{
           </WrapperHeaderNavbarItem>
           <WrapperHeaderNavbarItem>
             <span>Kết nối</span>
-            <a
-              href={process.env.REACT_APP_IS_LOCAL ? "https://www.facebook.com/" : window.location.href}
+            <div
               style={{ display: "block", margin: "0 5px" }}
             >
               <FacebookOutlined style={{ color: "#fff", fontSize: "16px" }} />
-            </a>
+            </div>
 
-            <a
-              href={process.env.REACT_APP_IS_LOCAL ? "https://www.instagram.com/Shopee_VN" : window.location.href}
+            <div
               style={{ display: "block" }}
             >
               <InstagramOutlined style={{ color: "#fff", fontSize: "16px" }} />
-            </a>
+            </div>
           </WrapperHeaderNavbarItem>
         </WrapperHeaderNavbarList>
 
@@ -198,10 +194,10 @@ const onClickSearch = () =>{
         <Col span={17}>
           <ButtonInputSearch
             placeholder="input search text"
-            textButton="Search"
+            textbutton="Search"
             size="large"
             bordered={false}
-            backgroundColorButton = "rgb(13,92,182)"
+            backgroundcolorbutton = "rgb(13,92,182)"
             onChange={onSearch}
             onClick= {onClickSearch}
           />
