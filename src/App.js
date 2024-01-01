@@ -84,7 +84,29 @@ function App() {
   return (
     <GlobalStyles>
       <div>
-        <h1>Testêror</h1>
+        <Router>
+          <Routes>
+            {routers.map((route) => {
+              //những trang nào có isShowNavbar = true thì sẽ có DefaultNavComponent(có NavbarComponent, có Header, footer) 
+              //không thì sẽ là DefaultComponent(chỉ có Header, footer) nếu route.isShowHeader=true hoặc sẽ ko có gì cả(Fragment) route.isShowHeader=false
+              const Layout = route.isShowNavbar ?  DefaultNavComponent : (route.isShowHeader ? DefaultComponent : Fragment);
+              const isCheckAuth = !route.isPrivate || user.isAdmin
+              return (
+                <Route
+                  key={route.path}
+                  //path: chỉ đường dẫn hướng tới trang của element={<Page/>}
+                  path={isCheckAuth && route.path}
+                  // element để chỉ trang hiển thị
+                  element={
+                    <Layout>
+                      <route.page />
+                    </Layout>
+                  }
+                />
+              );
+            })}
+          </Routes>
+        </Router>
       </div>
     </GlobalStyles>
   );
