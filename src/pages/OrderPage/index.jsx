@@ -182,8 +182,7 @@ const handleOnchaneAddress = () =>{
     <>
     <div className={styles.cartCompWrap} >
       <div className={styles.headerCart}>
-              <div className={styles.headerCartItem}>SHOP BÁN HÀNG</div>
-              <div className={styles.headerCartItem}>GIỎ HÀNG </div>
+            <div className={styles.headerCartItem}>GIỎ HÀNG </div>
           </div>
       <div className={styles.cartComp} >
         <div className={styles.containerCart} >
