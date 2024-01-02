@@ -259,20 +259,6 @@ const FooterComp = () => {
         <div className="footer__bottom-list-icon">
           <div className="footer__bottom-icon-link">
             <img
-              src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" 
-              alt=""
-              className="footer__bottom-icon-img"
-            />
-          </div>
-          <div className="footer__bottom-icon-link">
-            <img
-              src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png" 
-              alt=""
-              className="footer__bottom-icon-img"
-            />
-          </div>
-          <div className="footer__bottom-icon-link">
-            <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3LNsouiRM4JTBr8C48WHd38xz8A70jr4ox00HJlMNuVdTBgdcPkGVOLx7Z7K0sOI8O8&usqp=CAU" 
               alt=""
               className="footer__bottom-icon-img"
