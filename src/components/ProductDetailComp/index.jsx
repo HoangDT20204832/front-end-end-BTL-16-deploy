@@ -205,7 +205,7 @@ const ProductDetailComp = ({ idProduct }) => {
           <h1 className={styles.nameProduct}>{productDetail?.name}</h1>
           <div>
             {/* <StarFilled className={styles.star} /> */}
-            <Rate allowHalf disabled defaultValue={5} value={averageRating} />
+            <Rate allowHalf disabled defaultValue={5} value={averageRating} style={{color:"var(--active-color)"}} />
             <span className={styles.textSell}>
               {" "}
               | Đã bán {productDetail?.selled} sản phẩm

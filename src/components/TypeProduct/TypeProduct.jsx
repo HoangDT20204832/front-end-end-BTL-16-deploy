@@ -15,6 +15,20 @@ const handleTypeImg = () =>{
     return "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lld91enbttqg1f"
     case "Chuột":
       return "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ll0wnc8fmevf01"
+    case "Ốp điện thoại":
+      return "https://down-vn.img.susercontent.com/file/sg-11134201-7rbmb-lq0vx4pf5plqb6"
+    case "Loa":
+      return "https://down-vn.img.susercontent.com/file/c10040b41e8cbf54a56c745da46d278f"
+    case "Bàn phím":
+      return "https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-lo4ypi6wvu2f6c"
+    case "Tủ lạnh":
+      return "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lq8rn9f3zebbb2"
+    case "Máy ảnh":
+      return "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmzwydz9ucs38c"
+    case "Máy hút bụi":
+      return "https://down-vn.img.susercontent.com/file/77488de0e587dc5bc92e1a9ff910c853"
+    case "Quạt tản nhiệt":
+      return "https://down-vn.img.susercontent.com/file/30ee1253fed77dd92f1162d2d4629902"
     default:
       return  "https://cdn.tgdd.vn/Products/Images/42/303833/iphone-15-pro-blue-thumbnew-600x600.jpg"
   }

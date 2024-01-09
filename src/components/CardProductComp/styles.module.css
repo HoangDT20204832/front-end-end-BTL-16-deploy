@@ -99,7 +99,7 @@
 }
 
 .productItemStar{
-    color: var(--star-gold-color);
+    color: var(--active-color) !important;
     font-size: 12px !important;
 
 }
