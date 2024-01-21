@@ -50,6 +50,7 @@ function HeaderComponent() {
 
   const handleLogoutUser = async() =>{
     await userService.logoutUser();
+    localStorage.removeItem('refresh_token');
     dispatch(resetUser())
   }
   
