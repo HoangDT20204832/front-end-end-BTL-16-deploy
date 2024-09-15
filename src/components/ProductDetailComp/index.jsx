@@ -314,7 +314,7 @@ setIsOpenUpdateInfor(true)
           </div>
           <div className={styles.addressProduct}>
             <span>Giao đến </span>
-            <span className={styles.address}>{user?.address}</span> -
+            <span className={styles.address}>{user?.address}</span> - 
             <span onClick={handleOnchaneAddress} className={styles.changeAddress}>Đổi địa chỉ</span>
           </div>
           <div
