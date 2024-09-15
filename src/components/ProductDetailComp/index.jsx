@@ -5,14 +5,21 @@ import ButtonComponent from "../ButtonComp/index";
 import React, { useEffect, useState } from "react";
 import * as productService from "../../services/productService";
 import * as reviewService from "../../services/reviewService";
+import * as userService from "../../services/userService"
 import { useQuery } from "@tanstack/react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
+import {   Modal,Form} from 'antd';
 import { addOrderProduct } from "../../redux/slides/orderSlide";
+import { updateUser } from '../../redux/slides/userSlide';
+
+
 import { format } from "date-fns";
 import clsx from "clsx";
 import LoadingComp from "../LoadingComp";
 import * as messagee from "../MessageComp"
+import InputComponent from "../InputComponent/InputComponent";
+import { useMutationHooks } from "../../hooks/useMutationHook";
 const ProductDetailComp = ({ idProduct }) => {
   const navigate = useNavigate();
   const location = useLocation(); //để lấy ra pathname trong location(đường dẫn của trang productdetail)
@@ -30,6 +37,83 @@ const ProductDetailComp = ({ idProduct }) => {
     setNumberProductBye(value);
   };
   const [loading, setLoading] = useState(false);
+  const[isOpenUpdateInfor, setIsOpenUpdateInfor] = useState(false)
+  const [stateUserDetail, setStateUserDetail] = useState({
+    name: "" , 
+    phone : "",
+    address : "",
+    city : "",
+    // sex : "",
+  })
+  const [form] = Form.useForm() 
+
+  // udpdate thông tin user khi ko đủ thoogn tin để giao hàng
+const mutationUpdate = useMutationHooks(
+  ( data) =>{ 
+    // setLoading(true)
+    const {id ,  ...rest } = data;
+    const res = userService.updateUserInfor(id, {...rest} )
+    return res
+    }
+)
+const {data: dataUpdated, isSuccess: isSuccessUpdated, isError:isErrorUpdated} = mutationUpdate
+
+  const handleOnChangeInputDetail = (e) =>{
+    setStateUserDetail({
+      ...stateUserDetail,
+      [e.target.name]: e.target.value
+    })
+}
+useEffect(() =>{
+    if(isOpenUpdateInfor){
+      setStateUserDetail({
+        ...stateUserDetail,
+        city: user?.city,
+        name: user?.name,
+        address: user?.address,
+        phone: user?.phone
+      })
+    }
+},[isOpenUpdateInfor])
+
+// khi click vào nút chỉnh sửa => stateUserDetail thay đổi =>
+// form.setFieldsValue: form set giá trị thay đổi thông tin trong form 
+// những giá trị của name="" của Form.Item trùng với các state trong stateUserDetail  = vs giá trị của stateUserDetail
+useEffect(()=> {
+  form.setFieldsValue(stateUserDetail)
+},[form, stateUserDetail])
+
+
+const handleCancelUpdate = () =>{
+  setStateUserDetail({
+  name: "" , 
+  phone : "",
+  address : "",
+  city : "",
+  // sex : "",
+  })
+form.resetFields()
+setIsOpenUpdateInfor(false)
+}
+
+const handleUpdateInforUser = () =>{
+const {name, phone, address, city} = stateUserDetail
+if(name&&phone&&address&&city){ 
+  mutationUpdate.mutate({id: user?.id , ...stateUserDetail},{
+    onSuccess: ()=>{
+      dispatch(updateUser({...user, _id: user?.id,name, phone, address, city}))
+      setIsOpenUpdateInfor(false)
+      messagee.success("Cập nhật địa chỉ thành công")
+    }
+  })
+}
+// form.resetFields()
+}
+
+
+const handleOnchaneAddress = () =>{
+setIsOpenUpdateInfor(true)
+}
 
   const handleChangeCount = (type, limited) => {
     if (type === "decrease") {
@@ -231,7 +315,7 @@ const ProductDetailComp = ({ idProduct }) => {
           <div className={styles.addressProduct}>
             <span>Giao đến </span>
             <span className={styles.address}>{user?.address}</span> -
-            <span className={styles.changeAddress}>Đổi địa chỉ</span>
+            <span onClick={handleOnchaneAddress} className={styles.changeAddress}>Đổi địa chỉ</span>
           </div>
           <div
             style={{
@@ -490,6 +574,69 @@ const ProductDetailComp = ({ idProduct }) => {
           </LoadingComp>
         </div>
       </div>
+
+      <Modal forceRender title="Cập nhật thông tin giao hàng" open={isOpenUpdateInfor}  onCancel={handleCancelUpdate} 
+            onOk={handleUpdateInforUser}>
+
+<Form
+        name="basic"
+        labelCol={{
+          span: 7,
+        }}
+        wrapperCol={{
+          span: 17,
+        }}
+        // onFinish={onUpdateUser}
+        autoComplete="on"
+        form={form}
+      >
+        <Form.Item
+          label="Tên người dùng"
+          name="name"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your name!',
+            },
+          ]}
+        >
+          <InputComponent value={stateUserDetail.name} name="name" onChange={handleOnChangeInputDetail} />
+        </Form.Item>
+
+        <Form.Item
+          label="SĐT" name="phone" 
+          rules={[{required: true,message: 'Please input your phone!',}]}
+        >
+          <InputComponent value={stateUserDetail.phone} name="phone" onChange={handleOnChangeInputDetail}/>
+        </Form.Item>
+
+        <Form.Item
+          label="Địa chỉ" name="address" 
+          rules={[{required: true,message: 'Please input your address!',}]}
+        >
+          <InputComponent value={stateUserDetail.address} name="address" onChange={handleOnChangeInputDetail}/>
+        </Form.Item>
+
+        <Form.Item
+          label="Nơi sống" name="city" 
+          rules={[{required: true,message: 'Please input your city!',}]}
+        >
+          <InputComponent value={stateUserDetail.city} name="city" onChange={handleOnChangeInputDetail}/>
+        </Form.Item>
+     
+
+        {/* <Form.Item
+          wrapperCol={{
+            offset: 20,
+            span: 16,
+          }}
+        >
+          <Button type="primary" htmlType="submit">
+            Apply
+          </Button>
+        </Form.Item> */}
+        </Form>
+    </Modal>
     </LoadingComp>
   );
 };
